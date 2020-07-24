@@ -59,6 +59,43 @@ a:hover {
     background-color: rgb(0, 0, 0);
 }
 
+.some, .red, .purple, .green, .yellow, .blue {
+    position: absolute;
+    top: 90%;
+    transform: translateX(-50%);
+    font-size: 18px;
+}
+
+.some {
+    left: 34%;
+    color: rgba(255, 255, 255, 0.783);
+}
+
+.red {
+    left: 56%;
+    color: rgb(255, 0, 0);
+}
+
+.purple {
+    left: 61%;
+    color: rgb(128, 0, 255);
+}
+
+.green {
+    left: 66%;
+    color: rgb(58, 176, 8);
+}
+
+.yellow {
+    left: 71%;
+    color: rgb(249, 249, 0);
+}
+
+.blue {
+    left: 76%;
+    color: rgb(0, 187, 175);
+}
+
 .screen {
     position: absolute;
     left: 10%;
@@ -77,13 +114,6 @@ a:hover {
     transform: translateX(-50%);
     width: 180px;
 }
-
-/* .navigator {
-    position: absolute;
-    top: 60%;
-    left: 40%;
-    transform: translateX(-50%);
-} */
 
 .vertical {
     height: 75px;
@@ -147,12 +177,10 @@ a:hover {
     
 }
 
-.select:before {
-
-}
-
 .start {
     bottom: 5%;
     left: 60%;
     transform: translateX(-50%);
 }
+
+
