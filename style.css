@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Press+Start+2P&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+h1 {
+    font-family: 'Cabin Sketch', cursive;
+    color: rgb(2, 44, 129);  
+    position: absolute;
+    font-size: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    background: url('assets/jose-larrazolo-S8bde3hkBR8-unsplash.jpg');
+    opacity: 0.2;
+}
+
+figurecaption {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+a:hover {
+    color: rgb(63, 137, 177); 
+}
+
+.gameboy-body {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 550px;
+    background-color: rgb(141, 105, 161);
+    border-radius: 2rem;
+}
+
+.black-screen {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    height: 260px;
+    background-color: rgb(0, 0, 0);
+}
+
+.screen {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 210px;
+    height: 210px;
+    background-color: rgba(162, 162, 162, 0.646);
+}
+
+.press-start {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    position: absolute;
+    top: 80%;
+    left: 62%;
+    transform: translateX(-50%);
+    width: 180px;
+}
+
+/* .navigator {
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    transform: translateX(-50%);
+} */
+
+.vertical {
+    height: 75px;
+    width: 15px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 62%;
+    left: 22%;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+}
+
+.horizontal {
+    height: 15px;
+    width: 65px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    border-radius: 2rem;  
+    top: 67%;
+    left: 22%;
+    transform: translateX(-50%);
+}
+
+.a-btn, .b-btn {
+    width: 36px;
+    height: 36px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+    color: rgb(131, 131, 131);
+    text-align: center;
+    font-size: 22px;
+    padding: 2px;
+}
+
+.a-btn{
+    top: 62%;
+    left: 78%;
+}
+
+.b-btn {
+    top: 67%;
+    left: 60%;
+}
+
+.select, .start {
+    height: 10px;
+    width: 42px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    border-radius: 2rem; 
+    color: rgb(131, 131, 131);
+    padding: 4px;
+    text-align: center;
+}
+
+.select {
+    bottom: 5%;
+    left: 38%;
+    transform: translateX(-50%);
+    
+}
+
+.select:before {
+
+}
+
+.start {
+    bottom: 5%;
+    left: 60%;
+    transform: translateX(-50%);
+}
