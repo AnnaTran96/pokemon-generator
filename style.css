@@ -137,6 +137,69 @@ a:hover {
     transform: translateX(-50%);
 }
 
+.arrow {
+    height: 2px;
+    width: 8px;
+    background-color: rgb(104, 104, 104);
+    position: absolute;
+}
+
+.top-a {
+    top: 64%;
+    left: 20%;
+    transform: translateX(-50%);
+    transform: rotate(-45deg);
+}
+
+.top-b {
+    top: 64%;
+    left: 22%;
+    transform: translateX(-50%);
+    transform: rotate(45deg);
+}
+
+.bottom-a {
+    top: 73%;
+    left: 20%;
+    transform: translateX(-50%);
+    transform: rotate(45deg);
+}
+
+.bottom-b {
+    top: 73%;
+    left: 22%;
+    transform: translateX(-50%);
+    transform: rotate(-45deg);
+}
+
+.left-a {
+    top: 68%;
+    left: 12%;
+    transform: translateX(-50%);
+    transform: rotate(-45deg);
+}
+
+.left-b {
+    top: 69%;
+    left: 12%;
+    transform: translateX(-50%);
+    transform: rotate(45deg);
+}
+
+.right-a {
+    top: 68%;
+    left: 29%;
+    transform: translateX(-50%);
+    transform: rotate(45deg);
+}
+
+.right-b {
+    top: 69%;
+    left: 29%;
+    transform: translateX(-50%);
+    transform: rotate(-45deg);
+}
+
 .a-btn, .b-btn {
     width: 36px;
     height: 36px;
