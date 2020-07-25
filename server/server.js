@@ -13,9 +13,3 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port,() => console.log(`App listening on: http://localhost:${port}`));
-
-
-
-//   //Launch listening server on port 8080
-//   app.listen(8080, function () {
-//     console.log('App listening on 
