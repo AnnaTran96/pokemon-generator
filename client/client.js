@@ -1,7 +1,8 @@
 const startBtn = document.querySelector('.start')
 const selectBtn = document.querySelector('.select')
 const aBtn = document.querySelector('.a-btn')
-const BBtn = document.querySelector('.b-btn')
+const bBtn = document.querySelector('.b-btn')
+const backBtn = document.querySelector('.back-btn')
 
 // **********************  START BUTTON **********************
 
@@ -53,6 +54,17 @@ function backgroundBlur() {
   document.querySelector('h1').style.filter = "blur(5px)";
   document.querySelector('.gameboy-body').style.filter = "blur(5px)";
   document.querySelector('.black-screen').style.filter = "blur(5px)";
+}
+
+backBtn.addEventListener('click', goBack)
+
+function goBack() {
+  document.querySelector('#search').style.visibility = "hidden";
+  document.querySelector('.background').style.filter = "blur(0px)";
+  document.querySelector('figurecaption').style.filter = "blur(0px)";
+  document.querySelector('h1').style.filter = "blur(0px)";
+  document.querySelector('.gameboy-body').style.filter = "blur(0px)";
+  document.querySelector('.black-screen').style.filter = "blur(0px)";
 }
 
 let random = Math.floor(Math.random() * imageArr.length)

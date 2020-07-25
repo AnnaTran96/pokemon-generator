@@ -285,6 +285,7 @@ a:hover {
     margin-top: 30px;
     background-color: teal;
     color: white;
+    padding: 10px;
 }
 
 .search-results {
@@ -303,7 +304,8 @@ a:hover {
 
 .pokemon-result, .type {
     position: absolute;
-    bottom:10%;
+    bottom: 24%;
+    font-size: 16px;
 }
 
 .pokemon-result {
@@ -314,3 +316,12 @@ a:hover {
     right: 35%;
 }
 
+.back-btn {
+    height: 20px;
+    position: absolute;
+    bottom: 10px;
+    font-family: 'Press Start 2P', cursive;
+    background-color: teal;
+    color: white;
+    padding: 10px 10px 20px 10px;
+}
