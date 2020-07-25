@@ -51,7 +51,7 @@ function stopInterval() {
 startBtn.addEventListener('click', function() {
   document.querySelector('#photo').style.visibility = "visible";
   startInterval()
-}) // add {once:true}
+})
 
 
 
@@ -63,19 +63,19 @@ aBtn.addEventListener('click', stopInterval)
 
 // **********************  SELECT BUTTON **********************
 
-selectBtn.addEventListener('click', backgroundBlur)
+selectBtn.addEventListener('click', () => {
+  stopInterval();
+  backgroundBlur();
+})
 
 function backgroundBlur() {
   document.querySelector('#search').style.visibility = "visible";
-  // document.querySelector(".images").removeEventListener("mousemove", changeImage);
   document.querySelector('.background').style.filter = "blur(5px)";
   document.querySelector('figurecaption').style.filter = "blur(5px)";
   document.querySelector('h1').style.filter = "blur(5px)";
   document.querySelector('.gameboy-body').style.filter = "blur(5px)";
   document.querySelector('.black-screen').style.filter = "blur(5px)";
 }
-
-backBtn.addEventListener('click', goBack)
 
 function goBack() {
   document.querySelector('#search').style.visibility = "hidden";
@@ -85,6 +85,11 @@ function goBack() {
   document.querySelector('.gameboy-body').style.filter = "blur(0px)";
   document.querySelector('.black-screen').style.filter = "blur(0px)";
 }
+
+backBtn.addEventListener('click', goBack)
+
+// **********************  SELECT BUTTON **********************
+
 
 let random = Math.floor(Math.random() * imageArr.length)
 
@@ -96,14 +101,11 @@ function choosePokemon(id) {
       .catch( error => console.log("Error occurred."))
 }
 
-// create new event listener for submit button
-// createe function to stop start button
-
-
 
 // **********************  B BUTTON **********************
 
 bBtn.addEventListener('click', () => {
+  stopInterval();
   document.querySelector('.zubat').style.visibility = "visible";
   document.querySelector('.background').style.filter = "blur(5px)";
   document.querySelector('figurecaption').style.filter = "blur(5px)";
