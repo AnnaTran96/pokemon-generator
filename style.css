@@ -5,7 +5,9 @@ body {
     padding: 0;
     font-family: monospace;
     overflow: hidden;
+    cursor: url('assets/console.png'), default;
 }
+
 
 h1 {
     font-family: 'Cabin Sketch', cursive;
@@ -260,11 +262,20 @@ a:hover {
 }
 
 #photo {
+    visibility: hidden;
     width: 55%;
     position: absolute;
 }
 
-#search {
+#pokeball {
+    width: 45%;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+}
+
+#search, .zubat {
     visibility: hidden;
 }
 
@@ -288,8 +299,7 @@ a:hover {
     padding: 10px;
 }
 
-.search-results {
-    /* visibility: hidden; */
+.search-results, .zubat {
     border: 2px solid rgb(0, 0, 0);
     width: 450px;
     height: 350px;
@@ -302,7 +312,7 @@ a:hover {
     justify-content: center;
 }
 
-.pokemon-result, .type {
+.pokemon-result, .type, .zubat-text {
     position: absolute;
     bottom: 24%;
     font-size: 16px;
@@ -324,4 +334,28 @@ a:hover {
     background-color: teal;
     color: white;
     padding: 10px 10px 20px 10px;
+    cursor: pointer;
+}
+
+.back-btn2 {
+    height: 20px;
+    position: absolute;
+    bottom: 10px;
+    font-family: 'Press Start 2P', cursive;
+    background-color: teal;
+    color: white;
+    padding: 10px 10px 20px 10px;
+    cursor: pointer;
+}
+
+.zubat {
+    right: 35%;
+    text-align: center;
+}
+
+.zubat img {
+    position: absolute;
+    top: 10%;
+    width: 50%;
+    height: 50%;
 }
