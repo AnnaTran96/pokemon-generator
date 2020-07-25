@@ -256,7 +256,7 @@ a:hover {
 .change-images {
     position: absolute;
     left: 72%;
-    top: 28%;
+    top: 22%;
     transform: translateX(-50%);
     width: 100%;
 }
@@ -265,6 +265,14 @@ a:hover {
     visibility: hidden;
     width: 55%;
     position: absolute;
+}
+
+.change-images {
+    position: absolute;
+    left: 72%;
+    top: 22%;
+    transform: translateX(-50%);
+    width: 100%;
 }
 
 #pokeball {
@@ -297,6 +305,18 @@ a:hover {
     background-color: teal;
     color: white;
     padding: 10px;
+}
+
+#who, #pokemon-api {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+}
+
+#pokemon-api {
+    visibility: hidden;
 }
 
 .search-results, .zubat {
