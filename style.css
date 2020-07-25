@@ -246,4 +246,19 @@ a:hover {
     transform: translateX(-50%);
 }
 
+.a-btn, .b-btn, .select, .start {
+    cursor: pointer;
+}
 
+.change-images {
+    position: absolute;
+    left: 72%;
+    top: 28%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+#photo {
+    width: 55%;
+    position: absolute;
+}
