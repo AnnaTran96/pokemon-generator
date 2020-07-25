@@ -264,8 +264,12 @@ a:hover {
     position: absolute;
 }
 
-#name, #submit {
+#search {
     visibility: hidden;
+}
+
+#name, #submit {
+    /* visibility: hidden; */
     font-family: 'Press Start 2P', cursive;
     position: absolute;
     top: 30%;
@@ -281,13 +285,10 @@ a:hover {
     margin-top: 30px;
     background-color: teal;
     color: white;
-    /* position: absolute;
-    left: 50%;
-    transform: translateX(-50%); */
 }
 
 .search-results {
-    visibility: hidden;
+    /* visibility: hidden; */
     border: 2px solid rgb(0, 0, 0);
     width: 450px;
     height: 350px;
