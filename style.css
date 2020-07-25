@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: monospace;
+    overflow: hidden;
 }
 
 h1 {
@@ -262,3 +263,53 @@ a:hover {
     width: 55%;
     position: absolute;
 }
+
+#name, #submit {
+    visibility: hidden;
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#name {
+    width: 60%;
+}
+
+#submit {
+    margin-top: 30px;
+    background-color: teal;
+    color: white;
+    /* position: absolute;
+    left: 50%;
+    transform: translateX(-50%); */
+}
+
+.search-results {
+    visibility: hidden;
+    border: 2px solid rgb(0, 0, 0);
+    width: 450px;
+    height: 350px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+}
+
+.pokemon-result, .type {
+    position: absolute;
+    bottom:10%;
+}
+
+.pokemon-result {
+    left: 5%;
+}
+
+.type {
+    right: 35%;
+}
+
