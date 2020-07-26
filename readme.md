@@ -6,7 +6,9 @@ Currently, this is designed to work on a large tablet or desktop. However, I wil
 
 ## Instructions
 
-Use `npm install` to start the server.
+Use `npm install` 
+
+The use `npm start` to start the server.
 
 Feel free to use Nodemon. If you do, the command line is: `nodemon ./server/server.js`.
 
