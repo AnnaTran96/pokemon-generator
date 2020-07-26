@@ -3,22 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pokemon Generator</title>
+        <title>Pokémon Generator</title>
         <link rel="stylesheet" href="style.css">
         <script defer src="client/client.js"></script>
     </head>
     <body>
         <header>
-            <h1>PokeFan</h1>
+            <h1>PokéFan</h1>
         </header>
 
         <div class="background"></div>
-        <figurecaption>Background Image Credit: <a href="https://unsplash.com/@joseadd?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">JOSE LARRAZOLO</a> on <a href="https://unsplash.com/s/photos/yellow?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></figurecaption>
+        <figcaption>Background Image Credit: <a href="https://unsplash.com/@joseadd?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">JOSE LARRAZOLO</a> on <a href="https://unsplash.com/s/photos/yellow?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></figcaption>
 
 
         <div class="gameboy-body">
-            <span class="vertical"></span>
-            <span class="horizontal"></span>
+            <span class="navigator vertical"></span>
+            <span class="navigator horizontal"></span>
             <span class="a-btn">A</span>
             <span class="b-btn">B</span>
             <span class="select">Select</span>
@@ -51,7 +51,7 @@
         <div id="search">
             <form id="form">
                 <label>
-                    <input type="text" id="searchBar" placeholder="Enter a Pokemon name">
+                    <input type="text" id="searchBar" placeholder="Enter a Pokemon name or ID">
                     <br>
                     <input type="submit" id="submit" value="Search">
                 </label>
@@ -66,14 +66,22 @@
         </div>
 
         <div class="zubat">
-            <p class="zubat-text">There is no surprise here but here's a Zubat for you to enjoy. Press <strong><span class="capitalise">start</strong></span> to use the Pokemon Generator!</p>
+            <p class="zubat-text">There is no surprise here but here's a Zubat for you to enjoy. Press <span class="capitalise">start</span> to use the Pokemon Generator!</p>
             <button class="back-btn2">Back</button>
             <img src="assets/img3.png" alt="zubat">
         </div>
 
-        <!-- <div id="test"> -->
+       <h3 id="quotes">Quotes</h3>
 
+        <div class="instructions">
+            <h2 class="instructions-title">Instructions</h2> 
+            <ul class="list">
+                <li>Press <span class="capitalise colour">start </span>to run the generator</li>
+                <li>Press <span class="capitalise colour">A </span>to see what Pokemon you have randomly got</li>
+                <li>Press <span class="capitalise colour">B </span>for a surprise!</li>
+                <li>Use the <span class="capitalise colour">navigator </span>to get inspired from Elite Pokémon Trainers!</li>
+            </ul>
         </div>
-        
+             
     </body>
 </html>
