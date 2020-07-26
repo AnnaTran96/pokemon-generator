@@ -1,3 +1,5 @@
+// const e = require("express")
+
 const startBtn = document.querySelector('.start')
 const selectBtn = document.querySelector('.select')
 const aBtn = document.querySelector('.a-btn')
@@ -8,7 +10,7 @@ const form = document.querySelector('#form')
 const pokemonResult = document.querySelector('.pokemon-result')
 const pokemonType = document.querySelector('.type')
 const pokemonImg = document.querySelector('#pokemon-api')
-
+const navigator = document.querySelector('.navigator')
 
 
 // **********************  START BUTTON **********************
@@ -77,7 +79,7 @@ selectBtn.addEventListener('click', () => {
 
 function blur() {
   document.querySelector('.background').style.filter = "blur(5px)";
-  document.querySelector('figurecaption').style.filter = "blur(5px)";
+  document.querySelector('figcaption').style.filter = "blur(5px)";
   document.querySelector('h1').style.filter = "blur(5px)";
   document.querySelector('.gameboy-body').style.filter = "blur(5px)";
   document.querySelector('.black-screen').style.filter = "blur(5px)";
@@ -85,7 +87,7 @@ function blur() {
 
 function noBlur() {
   document.querySelector('.background').style.filter = "blur(0px)";
-  document.querySelector('figurecaption').style.filter = "blur(0px)";
+  document.querySelector('figcaption').style.filter = "blur(0px)";
   document.querySelector('h1').style.filter = "blur(0px)";
   document.querySelector('.gameboy-body').style.filter = "blur(0px)";
   document.querySelector('.black-screen').style.filter = "blur(0px)";
@@ -110,9 +112,9 @@ backBtn.addEventListener('click', () => {
 // **********************  SEARCH BUTTON **********************
 
 
-const searchPokemon = () => {
-  // let id = e.target.searchBar.value;
-  const url = `https://pokeapi.co/api/v2/pokemon/4`;
+const searchPokemon = e => {
+  let id = e.target.searchBar.value;
+  const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
   fetch(url) 
     .then(res => { return res.json() })
     .then(data => {
@@ -126,6 +128,7 @@ const searchPokemon = () => {
       console.log(`#${pokemon.id} ${pokemon.name} ${pokemon.img} ${pokemon.type}`)
     displayPokemon(pokemon);
     })
+    // .catch(alert('Please enter a valid name of ID number'))
 }
 
 const displayPokemon = search => {
@@ -148,7 +151,7 @@ function noPokemonVisibility() {
 form.addEventListener('submit', e => {
   e.preventDefault();
   document.querySelector('#who').style.visibility = "hidden"
-  searchPokemon();
+  searchPokemon(e);
   pokemonResult.style.visibility = "visible";
   pokemonType.style.visibility = "visible";
   pokemonImg.style.visibility = "visible";
@@ -174,3 +177,16 @@ backBtn2.addEventListener('click', goBack2)
 
 //let audio = new Audio('opening.mp3');
 //audio.play();
+
+
+// **********************  NAVIGATOR BUTTONS  **********************
+
+navigator.addEventListener('click', () => {
+
+  fetch('http://localhost:3000/pokemon/random')
+    .then(response => {
+      let quote = response.data;
+      const h1 = document.getElementById('quotes')
+      h1.textContent = quote; 
+  })
+})
