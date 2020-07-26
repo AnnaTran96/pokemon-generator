@@ -4,13 +4,20 @@ const aBtn = document.querySelector('.a-btn')
 const bBtn = document.querySelector('.b-btn')
 const backBtn = document.querySelector('.back-btn')
 const backBtn2 = document.querySelector('.back-btn2')
+const form = document.querySelector('#form')
+const pokemonResult = document.querySelector('.pokemon-result')
+const pokemonType = document.querySelector('.type')
+const pokemonImg = document.querySelector('#pokemon-api')
 
 
 
 // **********************  START BUTTON **********************
 
+
+// Using Images from Assets folder
+
 let imageArr = new Array();
-for(var i = 1; i < 53; i++) {
+for(let i = 1; i < 53; i++) {
   imageArr.push(`assets/img${i}.png`)
 }
 
@@ -68,8 +75,7 @@ selectBtn.addEventListener('click', () => {
   backgroundBlur();
 })
 
-function backgroundBlur() {
-  document.querySelector('#search').style.visibility = "visible";
+function blur() {
   document.querySelector('.background').style.filter = "blur(5px)";
   document.querySelector('figurecaption').style.filter = "blur(5px)";
   document.querySelector('h1').style.filter = "blur(5px)";
@@ -77,8 +83,7 @@ function backgroundBlur() {
   document.querySelector('.black-screen').style.filter = "blur(5px)";
 }
 
-function goBack() {
-  document.querySelector('#search').style.visibility = "hidden";
+function noBlur() {
   document.querySelector('.background').style.filter = "blur(0px)";
   document.querySelector('figurecaption').style.filter = "blur(0px)";
   document.querySelector('h1').style.filter = "blur(0px)";
@@ -86,20 +91,68 @@ function goBack() {
   document.querySelector('.black-screen').style.filter = "blur(0px)";
 }
 
-backBtn.addEventListener('click', goBack)
-
-// **********************  SELECT BUTTON **********************
-
-
-let random = Math.floor(Math.random() * imageArr.length)
-
-function choosePokemon(id) {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-      .then(console.log(`https://pokeapi.co/api/v2/pokemon/${id}`))
-      .then(response => response.json)
-      .then(pokemon => console.log(pokemon.name))
-      .catch( error => console.log("Error occurred."))
+function backgroundBlur() {
+  document.querySelector('#search').style.visibility = "visible";
+  blur();
 }
+
+function goBack() {
+  document.querySelector('#search').style.visibility = "hidden";
+  noBlur();
+  noPokemonVisibility();
+}
+
+backBtn.addEventListener('click', () => {
+  backgroundBlur();
+  goBack();
+})
+
+// **********************  SEARCH BUTTON **********************
+
+
+const searchPokemon = () => {
+  // let id = e.target.searchBar.value;
+  const url = `https://pokeapi.co/api/v2/pokemon/4`;
+  fetch(url) 
+    .then(res => { return res.json() })
+    .then(data => {
+      console.log(data)
+      const pokemon = {
+        name: data.name,
+        id: data.id,
+        img: data.sprites.front_default,
+        type: data.types.map(type => type.type.name).join(', ')
+      };
+      console.log(`#${pokemon.id} ${pokemon.name} ${pokemon.img} ${pokemon.type}`)
+    displayPokemon(pokemon);
+    })
+}
+
+const displayPokemon = search => {
+  console.log(search);
+  const name = search.name;
+  const id = search.id;
+  const type = search.type;
+  const img = search.img
+  pokemonResult.textContent = `#${id}   ${name}`;
+  pokemonType.textContent = `Type: ${type}`;
+  pokemonImg.setAttribute("src", img)
+}
+
+function noPokemonVisibility() {
+  pokemonResult.style.visibility = "hidden";
+  pokemonType.style.visibility = "hidden";
+  pokemonImg.style.visibility = "hidden";
+}
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  document.querySelector('#who').style.visibility = "hidden"
+  searchPokemon();
+  pokemonResult.style.visibility = "visible";
+  pokemonType.style.visibility = "visible";
+  pokemonImg.style.visibility = "visible";
+})
 
 
 // **********************  B BUTTON **********************
@@ -107,22 +160,17 @@ function choosePokemon(id) {
 bBtn.addEventListener('click', () => {
   stopInterval();
   document.querySelector('.zubat').style.visibility = "visible";
-  document.querySelector('.background').style.filter = "blur(5px)";
-  document.querySelector('figurecaption').style.filter = "blur(5px)";
-  document.querySelector('h1').style.filter = "blur(5px)";
-  document.querySelector('.gameboy-body').style.filter = "blur(5px)";
-  document.querySelector('.black-screen').style.filter = "blur(5px)";
+  blur();
 }) 
-
-backBtn2.addEventListener('click', goBack2)
 
 function goBack2() {
   document.querySelector('.zubat').style.visibility = "hidden";
-  document.querySelector('.background').style.filter = "blur(0px)";
-  document.querySelector('figurecaption').style.filter = "blur(0px)";
-  document.querySelector('h1').style.filter = "blur(0px)";
-  document.querySelector('.gameboy-body').style.filter = "blur(0px)";
-  document.querySelector('.black-screen').style.filter = "blur(0px)";
+  noBlur();
 }
 
+backBtn2.addEventListener('click', goBack2)
 
+// **********************  TOGGLE ON/OFF  **********************
+
+//let audio = new Audio('opening.mp3');
+//audio.play();
