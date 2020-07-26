@@ -29,7 +29,7 @@ figurecaption {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    font-size: 18px;
+    font-size: 12px;
 }
 
 a {
@@ -287,7 +287,7 @@ a:hover {
     visibility: hidden;
 }
 
-#name, #submit {
+#searchBar, #submit {
     /* visibility: hidden; */
     font-family: 'Press Start 2P', cursive;
     position: absolute;
@@ -296,7 +296,7 @@ a:hover {
     transform: translateX(-50%);
 }
 
-#name {
+#searchBar {
     width: 60%;
 }
 
@@ -317,6 +317,15 @@ a:hover {
 
 #pokemon-api {
     visibility: hidden;
+    width: 50%;
+    top: -2%;
+}
+
+
+
+.type, .pokemon-result {
+    visibility: hidden;
+    text-transform: capitalize;
 }
 
 .search-results, .zubat {
@@ -332,18 +341,25 @@ a:hover {
     justify-content: center;
 }
 
-.pokemon-result, .type, .zubat-text {
+.pokemon-result, .type, .id, .zubat-text {
     position: absolute;
     bottom: 24%;
-    font-size: 16px;
+}
+
+.capitalise {
+    text-transform: uppercase;
 }
 
 .pokemon-result {
-    left: 5%;
+    bottom: 30%;
+    margin:0 auto;
+    font-size: 22px;
 }
 
 .type {
-    right: 35%;
+    bottom: 20%;
+    margin: 0 auto;
+    font-size: 16px;
 }
 
 .back-btn {
