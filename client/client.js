@@ -11,6 +11,7 @@ const pokemonResult = document.querySelector('.pokemon-result')
 const pokemonType = document.querySelector('.type')
 const pokemonImg = document.querySelector('#pokemon-api')
 const navigator = document.querySelector('.navigator')
+const intructions = document.querySelector('.instructions')
 
 
 // **********************  START BUTTON **********************
@@ -83,6 +84,7 @@ function blur() {
   document.querySelector('h1').style.filter = "blur(5px)";
   document.querySelector('.gameboy-body').style.filter = "blur(5px)";
   document.querySelector('.black-screen').style.filter = "blur(5px)";
+  document.querySelector('.instructions').style.filter = "blur(5px)";
 }
 
 function noBlur() {
@@ -91,6 +93,7 @@ function noBlur() {
   document.querySelector('h1').style.filter = "blur(0px)";
   document.querySelector('.gameboy-body').style.filter = "blur(0px)";
   document.querySelector('.black-screen').style.filter = "blur(0px)";
+  document.querySelector('.instructions').style.filter = "blur(0px)";
 }
 
 function backgroundBlur() {
