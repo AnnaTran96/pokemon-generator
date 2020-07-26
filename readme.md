@@ -1,6 +1,6 @@
 # Pokémon Generator
 
-I have created a Pokémon Generator that will generate a random pokemon using both a REST API and Pokémon's API](https://pokeapi.co/).
+I have created a Pokémon Generator that will generate a random pokemon using both a REST API and [Pokémon's API](https://pokeapi.co/).
 
 Currently, this is designed to work on a large tablet or desktop. However, I will continue to work on this to make it responsive on all devices.
 
