@@ -12,6 +12,8 @@ Feel free to use Nodemon. If you do, the command line is: `nodemon ./server/serv
 
 Now you are ready to use the Pokémon Generator.
 
+Alternatively, you can use this generator via this [link](https://annatran96.github.io/pokemon-generator/).
+
 ## Improvements Pending
 
 I am still in the process of:
