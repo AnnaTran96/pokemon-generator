@@ -1,20 +1,18 @@
 # Pokémon Generator
 
-I have created a Pokémon Generator that will generate a random pokemon using both a REST API and [Pokémon's API](https://pokeapi.co/).
+I have created a Pokémon Generator that will generate a random Pokémon using both a REST API and [Pokémon's API](https://pokeapi.co/).
 
 Currently, this is designed to work on a large tablet or desktop. However, I will continue to work on this to make it responsive on all devices.
 
+Live Demo: [link](https://annatran96.github.io/pokemon-generator/)
+
 ## Instructions
 
-Use `npm install` 
+Run `npm install` 
 
-Then use `npm start` to start the server.
-
-Feel free to use Nodemon. If you do, the command line is: `nodemon ./server/server.js`.
+Then run `npm start` to start the server.
 
 Now you are ready to use the Pokémon Generator.
-
-Alternatively, you can use this generator via this [link](https://annatran96.github.io/pokemon-generator/).
 
 ## Improvements Pending
 
@@ -23,4 +21,4 @@ I am still in the process of:
 - Making it responsive
 - Running more tests
 - Getting my Pokémon quotes to display
-- Possibly switching the photos to use only Pokémon's API .png links so when this repo is forked and cloned, it won't take too much memory on your desktop.
+- Replacing the .png images with Pokemon's API image link addresses. The purpose of this is is to reduce the loading time. Potentially this can save data on your device when this repo has been forked and cloned.
