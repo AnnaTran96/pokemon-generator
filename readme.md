@@ -4,7 +4,7 @@ I have created a Pokémon Generator that will generate a random Pokémon using b
 
 Currently, this is designed to work on a large tablet or desktop. However, I will continue to work on this to make it responsive on all devices.
 
-Live Demo: [link](https://annatran96.github.io/pokemon-generator/)
+[Live Demo](https://annatran96.github.io/pokemon-generator/)
 
 ## Instructions
 
